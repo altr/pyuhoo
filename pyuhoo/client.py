@@ -115,7 +115,7 @@ class Client(object):
             await self.refresh_token()
             data_latest = await self._api.data_latest()
 
-        # self._log.debug(f"[data_latest] returned\n{json_pp(data_latest)}")
+        self._log.debug(f"[data_latest] returned\n{json_pp(data_latest)}")
 
         self.user_settings_temp = data_latest["userSettings"].get(
             "temp", self.user_settings_temp
