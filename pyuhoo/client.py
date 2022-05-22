@@ -125,7 +125,7 @@ class Client(object):
             serial_number: str = device["serialNumber"]
             if serial_number not in self._devices:
                 self._devices[serial_number] = Device(device)
-                self._devices[serial_number].update_data(device["data"])
+            self._devices[serial_number].update_data(device["data"])
 
     def get_device(self, serial_number) -> Optional[Device]:
         if serial_number in self._devices:
