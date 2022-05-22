@@ -20,6 +20,7 @@ class Client(object):
         if kwargs.get("debug") is True:
             self._log.setLevel(logging.DEBUG)
             self._log.debug("Debug mode is explicitly enabled.")
+            self._log.debug("App version:" + APP_VERSION)
         else:
             self._log.debug(
                 "Debug mode is not explicitly enabled (but may be enabled elsewhere)."
